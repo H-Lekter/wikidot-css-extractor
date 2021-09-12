@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="Content-Type" content="text/html">
@@ -14,29 +14,25 @@
   <link rel="stylesheet" href="https://tristen.ca/tablesort/tablesort.css">
 <link rel="stylesheet" href="https://ammongit.github.io/wikidot-css-extractor/static/style.css">
 
-  <title>SCP Wiki Style Statistics</title>
+  <title>Statistiques de style du site de la Fondation SCP</title>
 </head>
 <body>
 <div id="container">
-  
-  <h1 class="title">Extracted Page Information</h1>
+
+  <h1 class="title">Informations recensées</h1>
   <p>
-    This page contains collected information from the wikitext of all the pages on the
-    SCP Wiki. The goal is to permit easy introspection over styling, includes, and other
-    usages on pages because these capabilities are not made easy via Wikidot.
+    Cette page contient des informations recensées dans le code source de toutes les pages du site de la Branche francophone de la Fondation SCP. Elle vise à permettre une vision d'ensemble et une réflexion sur la base de code, les styles et inclusions et autre usages de ces pages difficiles à évaluer directement via Wikidot.
   </p>
 
   <p>
-    Additionally, if you download the JSON dataset (see below), you can use the
-    <code>grep.py</code> script to search through all page sources via regular expression.
+    De plus, si vous téléchargez l'ensemble de données JSON (voir ci-dessous), vous pourrez utiliser le script <code>grep.py</code> pour chercher à travers le code source de toutes les pages avec quelques commandes simples.
   </p>
 
   <p>
-    See the <a href="https://github.com/ammongit/wikidot-css-extractor">GitHub repository</a>
-    for more information.
+    Voir le <a href="https://github.com/ammongit/wikidot-css-extractor">dépôt GitHub</a> pour plus d'informations.
   </p>
 
-  
+
 
   <h2 class="header">
     <a href="/wikidot-css-extractor/pages/" target="_blank">
@@ -44,133 +40,188 @@
     </a>
   </h2>
   <p>
-    There are 14,141 pages on the SCP Wiki.
+    Il y a 6,197 pages sur le wiki de la Fondation SCP.
   </p>
 
-  
+
 
   <h2 class="header">
     <a href="/wikidot-css-extractor/module-css.html" target="_blank">
-      Module Styles
+      Styles en modules
     </a>
   </h2>
   <p>
-    There are 1,953 unique stylings in
-    <code>[[module CSS]]</code> blocks across the SCP Wiki.
-    The top 3 most common are:
+    Il y a 542 styles uniques dans des <code>[[module CSS]]</code> sur l'ensemble du site.
+    Les 3 plus communs sont :
   </p>
 
   <ol>
-    
+
       <li>
-        (found 135) <br>
-        <pre class="code-large"><code>@import url(/component:scp-pride/code/1);</code></pre>
+        (trouvées : 8) <br>
+        <pre class="code-large"><code>
+div.log {
+  float: center;
+  border: gray 1px;
+  padding: 7px;
+  margin: 3px;
+  background-color: #fafafa;
+  box-shadow: 0 2px 4px rgba(75, 75, 75, .5);
+}
+</code></pre>
       </li>
-    
+
       <li>
-        (found 84) <br>
-        <pre class="code-large"><code>#side-bar {
-    background: rgb(var(--white-monochrome));
-}
+        (trouvées : 7) <br>
+        <pre class="code-large"><code>.page {
+    display: block;
+    overflow: hidden;
+    font-family: 'Monotype Corsiva', 'Bradley Hand ITC', sans-serif;
+    font-style: normal;
 
-#side-bar div.menu-item a, #side-bar div.menu-item .text {
-    color: rgb(var(--black-monochrome));
-}
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: transparent;
+    background-image: linear-gradient(to top ,rgb(202, 219, 228) 0%, rgb(231, 233, 220) 8%);
+    background-origin: padding-box;
+    background-position: 0px 8px;
+    background-repeat: repeat;
+    background-size: 100% 20px;
 
-#side-bar&gt;div:nth-child(5) {
-    background-color: rgba(var(--dark-accent),0.25)!important;
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2)
+    }
+.page p {
+    line-height: 20px;
+    margin: 0;
 }</code></pre>
       </li>
-    
+
       <li>
-        (found 81) <br>
-        <pre class="code-large"><code>sup { 
-vertical-align: top; position: relative; top: -0.5em; 
+        (trouvées : 7) <br>
+        <pre class="code-large"><code>#header {background-image: url(http://fondationscp.wdfiles.com/local--files/arbh-class-hub/Pissresize.png);}
+#header h1 a {
+    display: block;
+    margin: 0;
+    padding: 90px 0 90px;
+    line-height: 0px;
+    max-height: 0px;
+    color: transparent;
+    background: transparent;
+    font-family: BauhausLTDemi. 'Nanum Gothic'. Arial. sans-serif;
+    text-decoration: none;
+    text-shadow: none;
+    letter-spacing: 0.9px;
 }
-:root{ 
---cutColour: #fafafa;
---barColour: #590505;
+ 
+#header h1 a::before {
+    content: &#34;Fondation SCP&#34;;
+    color: #fff;
+    letter-spacing: -0.02em;
+    text-shadow: 3px 3px 5px #000;
+}
+ 
+#header h2 span {
+    display: block;
+    margin: 0;
+    padding: 19px 0;
+    line-height: -45px;
+    max-height: 0px;
+    font-weight: bold;
+    color: transparent;
+    text-shadow: none;
+}
+ 
+#header h2 span::before {
+    content: &#39;Enfer insectoïde&#39;;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.8);
 }
 
-.info-container .collapsible-block-folded a{
-color: #FFF;}
-.info-container .collapsible-block-unfolded-link a{
-color: #FFF;}
+sup {
+  vertical-align: top;
+  position: relative;
+  top: -0.5em;
+}
 
-.translation_block{
-display:none;}</code></pre>
+.scp-image-block.block-right { margin: 1em 2em 1em 1em; }
+</code></pre>
       </li>
-    
+
   </ol>
 
-  
+
 
   <h2 class="header">
     <a href="/wikidot-css-extractor/inline-css.html" target="_blank">
-      Inline Styles
+      Styles inline
     </a>
   </h2>
   <p>
-    There are 4,203 unique inline stylings
-    across the SCP Wiki.
-    The top 10 most common are:
+    Il y a 2211 styles inline uniques sur l'ensemble du site.
+    Les 10 plus communs sont :
   </p>
 
   <ol>
-    
+
       <li>
-        (found 249)
-        <pre class="code"><code>width:100%;</code></pre>
+        (trouvées : 68)
+        <pre class="code"><code>display: none</code></pre>
       </li>
-    
+
       <li>
-        (found 201)
-        <pre class="code"><code>border:solid 1px #999999; background:#f2f2c2; padding:5px; margin-bottom: 10px;</code></pre>
+        (trouvées : 57)
+        <pre class="code"><code>color:red</code></pre>
       </li>
-    
+
       <li>
-        (found 175)
-        <pre class="code"><code>border: none; width: 100%;</code></pre>
-      </li>
-    
-      <li>
-        (found 164)
+        (trouvées : 55)
         <pre class="code"><code>text-align: right;</code></pre>
       </li>
-    
+
       <li>
-        (found 148)
+        (trouvées : 54)
+        <pre class="code"><code>border: none; width: 100%;</code></pre>
+      </li>
+
+      <li>
+        (trouvées : 47)
+        <pre class="code"><code>border:solid 1px #999999; background:#f2f2c2; padding:5px; margin-bottom: 10px;</code></pre>
+      </li>
+
+      <li>
+        (trouvées : 42)
+        <pre class="code"><code>width:100%;</code></pre>
+      </li>
+
+      <li>
+        (trouvées : 36)
         <pre class="code"><code>display: inline-block; border-radius: 10px; border:dashed 1px #444444; background:#F5F5F5; float:top; width:96.5%; padding:10px</code></pre>
       </li>
-    
+
       <li>
-        (found 143)
-        <pre class="code"><code>width: 100%;</code></pre>
+        (trouvées : 34)
+        <pre class="code"><code>color:white</code></pre>
       </li>
-    
+
       <li>
-        (found 93)
-        <pre class="code"><code>width: 300px;</code></pre>
+        (trouvées : 33)
+        <pre class="code"><code>color:blue</code></pre>
       </li>
-    
+
       <li>
-        (found 90)
-        <pre class="code"><code>text-align: center; width: 25%;</code></pre>
+        (trouvées : 32)
+        <pre class="code"><code>float:right; margin:0 2em 1em 2em; width:300px; border:0;</code></pre>
       </li>
-    
-      <li>
-        (found 89)
-        <pre class="code"><code>border-bottom: 1px solid #AAA; border-right: 1px solid #AAA; text-align: center; width: 25%;</code></pre>
-      </li>
-    
-      <li>
-        (found 88)
-        <pre class="code"><code>border-right: 1px solid #AAA; text-align: center; width: 25%;</code></pre>
-      </li>
-    
+
   </ol>
 
-  
+
 
   <h2 class="header">
     <a href="/wikidot-css-extractor/includes.html" target="_blank">
@@ -178,250 +229,214 @@ display:none;}</code></pre>
     </a>
   </h2>
   <p>
-    There are 486 unique included pages in use across the SCP Wiki.
-    The top 10 most common are:
+    Il y a 182 inclusions uniques sur l'ensemble du site.
+    Les 10 plus communes sont :
   </p>
 
   <ol>
-    
+
       <li>
-        (found 3,013)
-        
-  
-  
+        (trouvées : 4,323)
 
-  
-    <a href="https://scp-wiki.wikidot.com/component:license-box-end" target="_blank"><code>:scp-wiki:component:license-box-end</code></a>
-  
 
-  
-    
-  <span class="page-info">
-    [<a href="/wikidot-css-extractor/pages/component:license-box-end.html" target="_blank">info</a>]
-  </span>
 
-  
+
+
+    <a href="https://fondationscp.wikidot.com/credit:end" target="_blank"><code>credit:end</code></a>
+
+
+
 
       </li>
-    
+
       <li>
-        (found 2,215)
-        
-  
-  
+        (trouvées : 4,323)
 
-  
-    <a href="https://scp-wiki.wikidot.com/component:image-block" target="_blank"><code>component:image-block</code></a>
-  
 
-  
+
+
+
+    <a href="https://fondationscp.wikidot.com/credit:start" target="_blank"><code>credit:start</code></a>
+
+
+
 
       </li>
-    
+
       <li>
-        (found 2,040)
-        
-  
-  
+        (trouvées : 1,830)
 
-  
-    <a href="https://scp-wiki.wikidot.com/component:license-box" target="_blank"><code>:scp-wiki:component:license-box</code></a>
-  
 
-  
-    
-  <span class="page-info">
-    [<a href="/wikidot-css-extractor/pages/component:license-box.html" target="_blank">info</a>]
-  </span>
 
-  
+
+
+    <a href="https://fondationscp.wikidot.com/component:image-block" target="_blank"><code>component:image-block</code></a>
+
+
+
 
       </li>
-    
+
       <li>
-        (found 847)
-        
-  
-  
+        (trouvées : 382)
 
-  
-    <a href="https://scp-wiki.wikidot.com/theme:black-highlighter-theme" target="_blank"><code>:scp-wiki:theme:black-highlighter-theme</code></a>
-  
 
-  
-    
-  <span class="page-info">
-    [<a href="/wikidot-css-extractor/pages/theme:black-highlighter-theme.html" target="_blank">info</a>]
-  </span>
 
-  
+
+
+    <a href="https://fondationscp.wikidot.com/component:preview" target="_blank"><code>component:preview</code></a>
+
+
+
 
       </li>
-    
+
       <li>
-        (found 781)
-        
-  
-  
+        (trouvées : 84)
 
-  
-    <a href="https://scp-wiki.wikidot.com/theme:black-highlighter-theme" target="_blank"><code>theme:black-highlighter-theme</code></a>
-  
 
-  
+
+
+
+    <a href="https://fondationscp.wikidot.com/component:scp-traduits" target="_blank"><code>component:scp-traduits</code></a>
+
+
+
 
       </li>
-    
+
       <li>
-        (found 587)
-        
-  
-  
+        (trouvées : 70)
 
-  
-    <a href="https://scp-wiki.wikidot.com/info:end" target="_blank"><code>info:end</code></a>
-  
 
-  
+
+
+
+    <a href="https://fondationscp.wikidot.com/theme:3law" target="_blank"><code>theme:3law</code></a>
+
+
+
 
       </li>
-    
+
       <li>
-        (found 585)
-        
-  
-  
+        (trouvées : 39)
 
-  
-    <a href="https://scp-wiki.wikidot.com/info:start" target="_blank"><code>info:start</code></a>
-  
 
-  
+
+
+
+    <a href="https://fondationscp.wikidot.com/theme:halloween" target="_blank"><code>theme:halloween</code></a>
+
+
+
 
       </li>
-    
+
       <li>
-        (found 425)
-        
-  
-  
+        (trouvées : 27)
 
-  
-    <a href="https://scp-wiki.wikidot.com/info:start" target="_blank"><code>:scp-wiki:info:start</code></a>
-  
 
-  
-    
-  <span class="page-info">
-    [<a href="/wikidot-css-extractor/pages/info:start.html" target="_blank">info</a>]
-  </span>
 
-  
+
+
+    <a href="https://fondationscp.wikidot.com/theme:wilsons" target="_blank"><code>theme:wilsons</code></a>
+
+
+
 
       </li>
-    
+
       <li>
-        (found 423)
-        
-  
-  
+        (trouvées : 21)
 
-  
-    <a href="https://scp-wiki.wikidot.com/info:end" target="_blank"><code>:scp-wiki:info:end</code></a>
-  
 
-  
-    
-  <span class="page-info">
-    [<a href="/wikidot-css-extractor/pages/info:end.html" target="_blank">info</a>]
-  </span>
 
-  
+
+
+    <a href="https://fondationscp.wikidot.com/component:image-zoom" target="_blank"><code>component:image-zoom</code></a>
+
+
+
 
       </li>
-    
+
       <li>
-        (found 373)
-        
-  
-  
+        (trouvées : 21)
 
-  
-    <a href="https://scp-wiki.wikidot.com/component:pride-highlighter" target="_blank"><code>:scp-wiki:component:pride-highlighter</code></a>
-  
 
-  
-    
-  <span class="page-info">
-    [<a href="/wikidot-css-extractor/pages/component:pride-highlighter.html" target="_blank">info</a>]
-  </span>
 
-  
+
+
+    <a href="https://fondationscp.wikidot.com/theme:mcd" target="_blank"><code>theme:mcd</code></a>
+
+
+
 
       </li>
-    
+
   </ol>
 
   <p>
-    Includes are pulled from 24 unique sites.
+    Includes are pulled from 16 unique sites.
     The top 10 most common are:
   </p>
 
   <ol>
-    
+
       <li>
-        (found 24,166)
-        <code>scp-wiki</code>
+        (trouvées : 13,739)
+        <code>fondationscp</code>
       </li>
-    
+
       <li>
-        (found 333)
+        (trouvées : 174)
         <code>scp-int</code>
       </li>
-    
+
       <li>
-        (found 191)
+        (trouvées : 45)
+        <code>scp-wiki</code>
+      </li>
+
+      <li>
+        (trouvées : 35)
         <code>scp-sandbox-3</code>
       </li>
-    
+
       <li>
-        (found 105)
+        (trouvées : 21)
         <code>topia</code>
       </li>
-    
+
       <li>
-        (found 89)
-        <code>scpsandbox2</code>
+        (trouvées : 4)
+        <code>lefilet</code>
       </li>
-    
+
       <li>
-        (found 45)
-        <code>kaktuskontainer</code>
+        (trouvées : 2)
+        <code>spe-mafiew</code>
       </li>
-    
+
       <li>
-        (found 33)
-        <code>scptestwiki</code>
+        (trouvées : 1)
+        <code>sandboxscpfr</code>
       </li>
-    
+
       <li>
-        (found 25)
-        <code>firedawnfolder</code>
+        (trouvées : 1)
+        <code>snippets</code>
       </li>
-    
+
       <li>
-        (found 19)
-        <code>scpcafe</code>
+        (trouvées : 1)
+        <code>comando05ptbr</code>
       </li>
-    
-      <li>
-        (found 13)
-        <code>smlt</code>
-      </li>
-    
+
   </ol>
 
-  
+
 
   <h2 class="header">
     <a href="/wikidot-css-extractor/classes.html" target="_blank">
@@ -429,87 +444,86 @@ display:none;}</code></pre>
     </a>
   </h2>
   <p>
-    There are 2,298 unique CSS classes in use across the SCP Wiki.
+    There are 969 unique CSS classes in use across the SCP Wiki.
     The top 10 most common are:
   </p>
 
   <ol>
-    
+
       <li>
-        (found 6,199)
+        (trouvées : 3,006)
         <pre class="code"><code>footer-wikiwalk-nav</code></pre>
       </li>
-    
+
       <li>
-        (found 530)
-        <pre class="code"><code>blockquote</code></pre>
+        (trouvées : 492)
+        <pre class="code"><code>pastille</code></pre>
       </li>
-    
+
       <li>
-        (found 428)
-        <pre class="code"><code>scp-image-block</code></pre>
-      </li>
-    
-      <li>
-        (found 380)
-        <pre class="code"><code>scp-image-caption</code></pre>
-      </li>
-    
-      <li>
-        (found 250)
-        <pre class="code"><code>block-center</code></pre>
-      </li>
-    
-      <li>
-        (found 227)
+        (trouvées : 245)
         <pre class="code"><code>content-panel</code></pre>
       </li>
-    
+
       <li>
-        (found 192)
+        (trouvées : 240)
         <pre class="code"><code>standalone</code></pre>
       </li>
-    
+
       <li>
-        (found 173)
-        <pre class="code"><code>block-right</code></pre>
+        (trouvées : 205)
+        <pre class="code"><code>series</code></pre>
       </li>
-    
+
       <li>
-        (found 118)
-        <pre class="code"><code>code</code></pre>
+        (trouvées : 138)
+        <pre class="code"><code>jaune</code></pre>
       </li>
-    
+
       <li>
-        (found 111)
-        <pre class="code"><code>page</code></pre>
+        (trouvées : 131)
+        <pre class="code"><code>orange</code></pre>
       </li>
-    
+
+      <li>
+        (trouvées : 116)
+        <pre class="code"><code>vert</code></pre>
+      </li>
+
+      <li>
+        (trouvées : 68)
+        <pre class="code"><code>rouge</code></pre>
+      </li>
+
+      <li>
+        (trouvées : 64)
+        <pre class="code"><code>scp-image-block</code></pre>
+      </li>
+
   </ol>
 
-  
+
 
   <h2 class="header">
     <a href="https://github.com/ammongit/wikidot-css-extractor/tree/gh-pages" target="_blank">
-      Raw Data
+      Données brutes
     </a>
   </h2>
   <p>
-    Raw JSON file can be downloaded from the
-    <a href="https://github.com/ammongit/wikidot-css-extractor/releases" target="_blank">releases</a> page.
+    Le fichier JSON peut être téléchargé sur la <a href="https://github.com/ammongit/wikidot-css-extractor/releases" target="_blank">page des releases</a>.
     <br>
-    This contains all the data used to build this site.
+    Il contient toutes les données utilisées pour construire ce site.
   </p>
 
   <p>
-    <strong>Warning!</strong> The file is very large, &gt; 100 MB.
+    <strong>Attention !</strong> Le fichier est très grand : 100 Mo.
   </p>
 
 </div>
 
 <div id="footer">
-  
-    <em>Last updated 2021-09-04 23:36:46.111513.</em>
-  
+
+    <em>Mis à jour pour la dernière fois le 17/09/2021 à 12:01:31.505562.</em>
+
 </div>
 </body>
